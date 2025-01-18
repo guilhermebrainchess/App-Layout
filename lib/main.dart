@@ -22,13 +22,10 @@ class ResponsiveLayout extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth < 600) {
-          // Layout para telas pequenas (celulares)
           return SmallScreenLayout();
         } else if (constraints.maxWidth < 1200) {
-          // Layout para telas médias (tablets)
           return MediumScreenLayout();
         } else {
-          // Layout para telas grandes (desktop)
           return LargeScreenLayout();
         }
       },
@@ -36,7 +33,6 @@ class ResponsiveLayout extends StatelessWidget {
   }
 }
 
-// Layout para telas pequenas
 class SmallScreenLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -90,7 +86,6 @@ class LargeScreenLayout extends StatelessWidget {
   }
 }
 
-// Widget do layout superior
 class LayoutSuperior extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -122,7 +117,6 @@ class MeuAplicativo extends StatelessWidget {
   }
 }
 
-// Widget do layout inferior
 class LayoutInferior extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
